@@ -46,7 +46,7 @@ export const generateDemoData = (): ApiResponse => {
     predictions: {
       cnn: generatePrediction('CNN', 0.75),
       mobileNetv2: generatePrediction('MobileNetV2', 0.85),
-      googlenet: generatePrediction('GoogleNet', 0.88),
+      googleNet: generatePrediction('GoogleNet', 0.88),
     },
   };
 };

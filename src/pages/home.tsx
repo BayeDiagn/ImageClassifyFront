@@ -6,7 +6,7 @@ import { ModeToggle } from '@/components/shared/theme-toogle';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Skeleton } from '@/components/ui/skeleton';
-import { Sparkles, AlertCircle, Brain, Zap, TestTube2 } from 'lucide-react';
+import { Sparkles, AlertCircle, Brain, Zap } from 'lucide-react';
 import { toast } from 'sonner';
 import { classifyImage, transformApiResponse, type ClassificationResponse } from '@/service/classify-image.service';
 import { simulateClassification } from '@/service/demo-data.service';
@@ -14,7 +14,7 @@ import { simulateClassification } from '@/service/demo-data.service';
 export default function HomePage() {
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
   const [results, setResults] = useState<ClassificationResponse | null>(null);
-  const [demoMode, setDemoMode] = useState(false); // Mode démo activé/désactivé
+  const [demoMode] = useState(false); // Mode démo activé/désactivé
 
   // Mutation pour la classification
   const classifyMutation = useMutation({
